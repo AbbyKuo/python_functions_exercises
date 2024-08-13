@@ -11,8 +11,13 @@ def get_float(prompt_string: str):
     Returns:
         - A float converted from the user's input
     """
+    converted_input = float(input(prompt_string))
 
-    pass
+    return converted_input
+
+
+
+
 
 #############################################################################################################
 # Challenge 2 -> A Function to convert miles to km
@@ -28,7 +33,8 @@ def miles_to_km(distance_in_miles: float):
         - a float representing the distance in kilometers
     """
     
-    pass
+    converted_km = distance_in_miles * 1.60934
+    return converted_km
 
 #############################################################################################################
 # Challenge 3 -> A function to calculate the total distance run in a relay
@@ -46,7 +52,8 @@ def relay_distance(distance_per_runner: float, number_of_runners: float):
         - A float representing the total distance run.
     """
     
-    pass
+    total_distance = distance_per_runner * number_of_runners
+    return total_distance
 
 #############################################################################################################
 # Challenge 4 (extra tricky, no tests for this one!)
@@ -60,3 +67,24 @@ def relay_distance(distance_per_runner: float, number_of_runners: float):
 # - print the total distance run by the team, in kilometers!
 # 
 # No need for this function to accept any arguments or return any values.
+
+def cal():
+
+    # step 1: prompt the user for the distance each runner in the relay race will run (in miles)
+    distance_in_miles = get_float("What is the distance in miles?: ")
+
+    # step 2:prompt the user for the number of runners in a team
+    no_of_runners = get_float("How many runners in a team?: ")
+
+    # step 3: convert miles to kms
+    distance_in_kms = miles_to_km(distance_in_miles)
+
+    # step 4: calculate relay distance  
+    total_team_distance =  relay_distance(no_of_runners, distance_in_kms)
+
+    # step 5: print total distance run by the team, in kilometers!
+    print(f"The total distance run by the team: ${total_team_distance}kms")
+
+
+cal()
+    
